@@ -47,7 +47,7 @@ const renderNewMovieElement = (id, title, imageUrl, rating) => {
     </div>
     `;
   
-  //newMovieElement.addEventListener("click", deleteMovieHandler.bind(null, id));
+  newMovieElement.addEventListener("dblclick", deleteMovieHandler.bind(null, id));
   const listRoot = document.getElementById("movie-list");
   listRoot.append(newMovieElement);
 };
