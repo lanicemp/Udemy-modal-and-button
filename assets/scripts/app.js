@@ -40,6 +40,7 @@ const deleteMovie = (movieId) => {
   listRoot.children[movieIndex].remove();
 
   closeMovieDeletionModal();
+  updateUI();
 };
 
 const StartDeleteMovieHandler = movieId => {
@@ -52,7 +53,7 @@ const StartDeleteMovieHandler = movieId => {
   confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
 
   confirmDeletionButton = deleteMovieModal.querySelector(".btn--danger");
-  
+
   cancelDeletionButton.removeEventListener("click", closeMovieDeletionModal);
   cancelDeletionButton.addEventListener("click", closeMovieDeletionModal);
   confirmDeletionButton.addEventListener(
